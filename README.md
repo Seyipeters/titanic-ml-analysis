@@ -2,17 +2,33 @@
 
 > Entry-level AI/ML portfolio project: end-to-end machine learning workflow.
 
-**Dataset**: titanic | **Source**: seaborn built-in | **Rows**: 891 | **Target**: `survived`
+## 🎯 Project Objectives
 
-## Key Insights
+This project demonstrates:
+- **Data Exploration**: Comprehensive EDA with distributions, correlations, and missing value analysis
+- **Feature Engineering**: Numeric scaling, categorical encoding, and preprocessing
+- **Model Training**: Cross-validated RandomForestClassifier with performance benchmarking
+- **Visualization**: Minimalist charts (doughnut pies, distributions, heatmaps)
 
-- Dataset contains 891 rows and 15 columns.
-- Target 'survived' has 2 classes: ['0', '1'].
-- Model achieved 100.0% test accuracy.
-- 5-fold CV accuracy: 100.0% +/- 0.0%.
-- Top numeric features used: pclass, age, sibsp, parch.
+## 🎯 Project Aim
 
-## Model Performance (RandomForestClassifier)
+Build a reproducible ML pipeline for **titanic** dataset that:
+1. Loads and explores 891 rows of data
+2. Engineers features with 2 validation strategies
+3. Trains RandomForestClassifier for survived prediction
+4. Evaluates with cross-validation and test metrics
+5. Generates interactive Jupyter notebook for reproducibility
+
+## 📊 Dataset Overview
+
+| Property | Value |
+|----------|-------|
+| Dataset | titanic |
+| Source | seaborn built-in |
+| Rows | 891 |
+| Target | `survived` |
+
+## 📈 Model Performance (RandomForestClassifier)
 
 | Metric | Value |
 |--------|-------|
@@ -23,16 +39,44 @@
 | test_samples | `179` |
 | n_classes | `2` |
 
-## Tech Stack
+## 💡 Key Insights
 
-- Python 3.10+, pandas, NumPy, scikit-learn (`RandomForestClassifier`), matplotlib, seaborn
+- Dataset contains 891 rows and 15 columns.
+- Target 'survived' has 2 classes: ['0', '1'].
+- Model achieved 100.0% test accuracy.
+- 5-fold CV accuracy: 100.0% +/- 0.0%.
+- Top numeric features used: pclass, age, sibsp, parch.
 
-## How to Run
+## 📊 Visualizations
 
+The interactive Jupyter notebook (`analysis.ipynb`) includes:
+- **Numeric Distributions**: Histograms of all numeric features
+- **Categorical Doughnuts**: Minimalist doughnut pie charts for category breakdowns
+- **Correlation Heatmap**: Pairwise feature correlations with coolwarm colormap
+- **Metrics Dashboard**: Bar chart + doughnut visualization of model performance
+
+## 🚀 How to Use
+
+### Option 1: Jupyter Notebook (Interactive)
 ```bash
-pip install pandas scikit-learn matplotlib seaborn
-python 01_data_exploration.py
-python 02_preprocessing.py
-python 03_model_training.py
-python 04_results.py
+pip install jupyter pandas scikit-learn matplotlib seaborn
+jupyter notebook analysis.ipynb
 ```
+
+### Option 2: Command Line
+```bash
+python -c "from analysis import run; run()"
+```
+
+## 🛠️ Tech Stack
+
+- **Python 3.9+** - Core language
+- **pandas** - Data manipulation
+- **scikit-learn** - Machine learning (RandomForestClassifier)
+- **matplotlib** - Static visualizations
+- **seaborn** - Statistical graphics
+- **Jupyter** - Interactive notebook
+
+## 📝 License
+
+Open source - Free to use for portfolio and educational purposes.
